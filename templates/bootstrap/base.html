@@ -1,0 +1,38 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="{% static "css/bootstrap.min.css" %}"
+    rel="stylesheet" 
+    {% comment %} integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+    crossorigin="anonymous">  These are used for online using css and js not for downloaded. {% endcomment %}
+  </head>
+  <body>
+    {% comment %} <div class="container-fluid"> {% endcomment %}
+        {% comment %} <h1 style="background-color: red;">My Todos</h1> {% endcomment %}
+        {% comment %} <h1 class = "bg-danger text-white">My Todos</h1> {% endcomment %}
+        <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/Logo.webp' %}"
+      alt="Logo"
+      width="30"
+      height="24"
+      class="d-inline-block align-text-top">
+       
+      ToDo
+    </a>
+  </div>
+</nav>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

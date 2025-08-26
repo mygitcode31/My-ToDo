@@ -1,0 +1,7 @@
+<form action ="" method = "post">
+    {% csrf_token%}     
+    {% comment %} # django le banayko code for security measure  {% endcomment %}
+
+    <input type = "text" name = "title" placeholder = "Enter your todo title..." />
+    <button type = "submit"> Save </button
+</form>
